@@ -354,7 +354,7 @@
             this.picPerson1.TabIndex = 5;
             this.picPerson1.TabStop = false;
             // 
-            // frmApplication
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -366,7 +366,7 @@
             this.Controls.Add(this.SplitHeadAndBody);
             this.Controls.Add(this.panHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmApplication";
+            this.Name = "frmMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";

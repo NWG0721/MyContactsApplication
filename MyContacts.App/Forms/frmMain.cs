@@ -77,7 +77,7 @@ namespace MyContacts.App
             int i = 1;
             foreach (var contact in contacts)
             {
-                //MemberGen(i,contact.Person_FullName,contact.Person_Phone,contact.Person_Picture);
+                MemberGen(i,contact.Person_FullName,contact.Person_Phone,contact.Person_Picture);
                 i++;
             }
         }
@@ -97,7 +97,7 @@ namespace MyContacts.App
             int i = 1;
             foreach (var contact in result)
             {
-                //MemberGen(i, contact.Person_FullName, contact.Person_Phone, contact.Person_Picture);
+                MemberGen(i, contact.Person_FullName, contact.Person_Phone, contact.Person_Picture);
                 i++;
             }
         }
