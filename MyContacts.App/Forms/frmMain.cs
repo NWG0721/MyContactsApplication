@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyContacts.Data;
 using MyContacts.Data.Context;
+using WiLBiT;
 
 namespace MyContacts.App
 {
@@ -45,6 +46,8 @@ namespace MyContacts.App
             InitializeComponent();
         }
 
+
+
         ContactsUnit db = new ContactsUnit();
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -67,7 +70,9 @@ namespace MyContacts.App
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            this.Hide();
             SelectMethod();
+            this.Show();
         }
 
         private void SelectMethod()
@@ -77,7 +82,7 @@ namespace MyContacts.App
             int i = 1;
             foreach (var contact in contacts)
             {
-                MemberGen(i,contact.Person_FullName,contact.Person_Phone,contact.Person_Picture);
+                MemberGen(contact.Person_ID, contact.Person_FullName, contact.Person_Phone, contact.Person_Picture);
                 i++;
             }
         }
@@ -91,7 +96,7 @@ namespace MyContacts.App
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-           var result = db.ContactsRepository.SelecetByFillter(txtSearch.Text);
+            var result = db.ContactsRepository.SelecetByFillter(txtSearch.Text);
 
             panBody.Controls.Clear();
             int i = 1;
@@ -107,9 +112,14 @@ namespace MyContacts.App
             txtSearch.Visible = !txtSearch.Visible;
         }
 
-        private void panPerson1_Click(object sender, EventArgs e)
-        {
 
+        public void panPerson_Click(object sender, EventArgs e)
+        {
+            WiLBiTPanel pan = sender as WiLBiTPanel;
+            string selectedRowName = pan.Name;
+            int index = Convert.ToInt32(selectedRowName.Remove(0, 8));
+            MessageBox.Show(index.ToString());
         }
+
     }
 }

@@ -89,6 +89,7 @@
             this.picLogo.BorderColor2 = System.Drawing.Color.Black;
             this.picLogo.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.picLogo.BorderSize = 2;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.picLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.picLogo.GradientAngle = 50F;
             this.picLogo.Image = global::MyContacts.App.Properties.Resources.icons8_trollface_96_1_;
@@ -105,6 +106,7 @@
             this.btnExit.Active1 = System.Drawing.Color.Red;
             this.btnExit.Active2 = System.Drawing.Color.Red;
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.Font = new System.Drawing.Font("Motley Forces", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,6 +170,7 @@
             this.btnUpdate.Active1 = System.Drawing.Color.Black;
             this.btnUpdate.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUpdate.Font = new System.Drawing.Font("Motley Forces", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,6 +193,7 @@
             this.btnSearch.Active1 = System.Drawing.Color.Black;
             this.btnSearch.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSearch.Font = new System.Drawing.Font("Motley Forces", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,6 +216,7 @@
             this.btnDelete.Active1 = System.Drawing.Color.Black;
             this.btnDelete.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDelete.Font = new System.Drawing.Font("Motley Forces", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,6 +238,7 @@
             this.btnAdd.Active1 = System.Drawing.Color.Black;
             this.btnAdd.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAdd.Font = new System.Drawing.Font("Motley Forces", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,13 +292,14 @@
             this.panPerson1.Controls.Add(this.lblPerson1);
             this.panPerson1.Controls.Add(this.spiltPerson1);
             this.panPerson1.Controls.Add(this.picPerson1);
+            this.panPerson1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panPerson1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panPerson1.ForeColor = System.Drawing.Color.White;
             this.panPerson1.Location = new System.Drawing.Point(0, 0);
             this.panPerson1.Name = "panPerson1";
             this.panPerson1.Size = new System.Drawing.Size(400, 84);
             this.panPerson1.TabIndex = 0;
-            this.panPerson1.Click += new System.EventHandler(this.panPerson1_Click);
+            this.panPerson1.Click += new System.EventHandler(this.panPerson_Click);
             // 
             // lblPerson1Phone
             // 
@@ -365,6 +372,7 @@
             this.Controls.Add(this.panFooter);
             this.Controls.Add(this.SplitHeadAndBody);
             this.Controls.Add(this.panHeader);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
             this.ShowIcon = false;

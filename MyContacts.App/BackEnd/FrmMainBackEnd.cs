@@ -7,7 +7,7 @@ using WiLBiT;
 
 namespace MyContacts.App
 {
-    internal partial class fhjg
+    internal partial class formGenerator
     {
         private void MemberGen(int index, string name, string phone, string picture)
         {
@@ -23,6 +23,7 @@ namespace MyContacts.App
 
             WiLBiT.WiLBiTRoundedPictureBox2 picPerson = new WiLBiT.WiLBiTRoundedPictureBox2();
 
+            frmMain form = new  frmMain();
 
             mainPanel.BackColor = System.Drawing.Color.Transparent;
             mainPanel.BorderColor = System.Drawing.Color.Cyan;
@@ -34,6 +35,7 @@ namespace MyContacts.App
             mainPanel.Name = "panPerson" + index;
             mainPanel.Size = new System.Drawing.Size(400, 73);
             mainPanel.TabIndex = 0;
+            mainPanel.Click += new System.EventHandler(form.panPerson_Click);
 
 
 
@@ -111,5 +113,6 @@ namespace MyContacts.App
             mainPanel.Controls.Add(spiltPerson);
             mainPanel.Controls.Add(picPerson);
         }
+
     }
 }

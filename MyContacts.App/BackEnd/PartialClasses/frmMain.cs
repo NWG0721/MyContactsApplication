@@ -56,6 +56,7 @@ namespace MyContacts.App
             splitPersonPhone.Size = new System.Drawing.Size(224, 15);
             splitPersonPhone.TabIndex = 8;
             splitPersonPhone.TabStop = false;
+            splitPersonPhone.Enabled = false;
 
 
 
@@ -78,6 +79,7 @@ namespace MyContacts.App
             spiltPerson.Size = new System.Drawing.Size(328, 15);
             spiltPerson.TabIndex = 6;
             spiltPerson.TabStop = false;
+            spiltPerson.Enabled = false;
 
 
 
