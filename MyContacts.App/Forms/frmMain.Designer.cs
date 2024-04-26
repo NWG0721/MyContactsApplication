@@ -285,7 +285,6 @@
             this.panPerson1.Name = "panPerson1";
             this.panPerson1.Size = new System.Drawing.Size(400, 84);
             this.panPerson1.TabIndex = 0;
-            this.panPerson1.Click += new System.EventHandler(this.panPerson_Click);
             // 
             // lblPerson1Phone
             // 
