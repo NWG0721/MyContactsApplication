@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WiLBiT;
 
 namespace MyContacts.App
@@ -35,6 +36,7 @@ namespace MyContacts.App
             mainPanel.Name = "panPerson" + index;
             mainPanel.Size = new System.Drawing.Size(400, 73);
             mainPanel.TabIndex = 0;
+            //MessageBox.Show(mainPanel.Name);
             mainPanel.Click += new System.EventHandler(form.panPerson_Click);
 
 

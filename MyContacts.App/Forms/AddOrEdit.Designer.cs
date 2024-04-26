@@ -35,12 +35,12 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new AltoControls.AltoTextBox();
-            this.wiLBiTTextBox1 = new WiLBiT.WiLBiTTextBox();
-            this.wiLBiTRoundedPictureBox21 = new WiLBiT.WiLBiTRoundedPictureBox2();
+            this.txtAddress = new WiLBiT.WiLBiTTextBox();
+            this.picPersonPicture = new WiLBiT.WiLBiTRoundedPictureBox2();
             this.btnOk = new AltoControls.AltoButton();
             this.btnCancel = new AltoControls.AltoButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.wiLBiTRoundedPictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // txtName
@@ -118,46 +118,46 @@
             this.txtEmail.Size = new System.Drawing.Size(135, 33);
             this.txtEmail.TabIndex = 3;
             // 
-            // wiLBiTTextBox1
+            // txtAddress
             // 
-            this.wiLBiTTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.wiLBiTTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.wiLBiTTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.wiLBiTTextBox1.BorderRadius = 15;
-            this.wiLBiTTextBox1.BorderSize = 2;
-            this.wiLBiTTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wiLBiTTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.wiLBiTTextBox1.Location = new System.Drawing.Point(13, 166);
-            this.wiLBiTTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.wiLBiTTextBox1.Multiline = true;
-            this.wiLBiTTextBox1.Name = "wiLBiTTextBox1";
-            this.wiLBiTTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.wiLBiTTextBox1.PasswordChar = false;
-            this.wiLBiTTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.wiLBiTTextBox1.PlaceholderText = "";
-            this.wiLBiTTextBox1.Size = new System.Drawing.Size(250, 108);
-            this.wiLBiTTextBox1.TabIndex = 6;
-            this.wiLBiTTextBox1.Texts = "";
-            this.wiLBiTTextBox1.UnderlinedStyle = false;
+            this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAddress.BorderColor = System.Drawing.Color.Transparent;
+            this.txtAddress.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtAddress.BorderRadius = 15;
+            this.txtAddress.BorderSize = 2;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddress.Location = new System.Drawing.Point(13, 166);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAddress.PasswordChar = false;
+            this.txtAddress.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtAddress.PlaceholderText = "";
+            this.txtAddress.Size = new System.Drawing.Size(250, 108);
+            this.txtAddress.TabIndex = 6;
+            this.txtAddress.Texts = "";
+            this.txtAddress.UnderlinedStyle = false;
             // 
-            // wiLBiTRoundedPictureBox21
+            // picPersonPicture
             // 
-            this.wiLBiTRoundedPictureBox21.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.wiLBiTRoundedPictureBox21.BorderColor = System.Drawing.Color.Red;
-            this.wiLBiTRoundedPictureBox21.BorderColor2 = System.Drawing.Color.Blue;
-            this.wiLBiTRoundedPictureBox21.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.wiLBiTRoundedPictureBox21.BorderSize = 2;
-            this.wiLBiTRoundedPictureBox21.ErrorImage = null;
-            this.wiLBiTRoundedPictureBox21.GradientAngle = 50F;
-            this.wiLBiTRoundedPictureBox21.Image = global::MyContacts.App.Properties.Resources.icons8_trollface_96_1_;
-            this.wiLBiTRoundedPictureBox21.InitialImage = null;
-            this.wiLBiTRoundedPictureBox21.Location = new System.Drawing.Point(4, 281);
-            this.wiLBiTRoundedPictureBox21.Name = "wiLBiTRoundedPictureBox21";
-            this.wiLBiTRoundedPictureBox21.Size = new System.Drawing.Size(100, 100);
-            this.wiLBiTRoundedPictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wiLBiTRoundedPictureBox21.TabIndex = 7;
-            this.wiLBiTRoundedPictureBox21.TabStop = false;
-            this.wiLBiTRoundedPictureBox21.Click += new System.EventHandler(this.wiLBiTRoundedPictureBox21_Click);
+            this.picPersonPicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.picPersonPicture.BorderColor = System.Drawing.Color.Red;
+            this.picPersonPicture.BorderColor2 = System.Drawing.Color.Blue;
+            this.picPersonPicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.picPersonPicture.BorderSize = 2;
+            this.picPersonPicture.ErrorImage = null;
+            this.picPersonPicture.GradientAngle = 50F;
+            this.picPersonPicture.Image = global::MyContacts.App.Properties.Resources.icons8_trollface_96_1_;
+            this.picPersonPicture.InitialImage = null;
+            this.picPersonPicture.Location = new System.Drawing.Point(4, 281);
+            this.picPersonPicture.Name = "picPersonPicture";
+            this.picPersonPicture.Size = new System.Drawing.Size(100, 100);
+            this.picPersonPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPersonPicture.TabIndex = 7;
+            this.picPersonPicture.TabStop = false;
+            this.picPersonPicture.Click += new System.EventHandler(this.wiLBiTRoundedPictureBox21_Click);
             // 
             // btnOk
             // 
@@ -214,8 +214,8 @@
             this.ClientSize = new System.Drawing.Size(277, 403);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.wiLBiTRoundedPictureBox21);
-            this.Controls.Add(this.wiLBiTTextBox1);
+            this.Controls.Add(this.picPersonPicture);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
@@ -228,7 +228,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddOrEdit";
             this.Load += new System.EventHandler(this.AddOrEdit_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.wiLBiTRoundedPictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,8 +243,8 @@
         private System.Windows.Forms.Label lblEmail;
         private AltoControls.AltoTextBox txtEmail;
         private AltoControls.AltoTextBox txtPhone;
-        private WiLBiT.WiLBiTTextBox wiLBiTTextBox1;
-        private WiLBiT.WiLBiTRoundedPictureBox2 wiLBiTRoundedPictureBox21;
+        private WiLBiT.WiLBiTTextBox txtAddress;
+        private WiLBiT.WiLBiTRoundedPictureBox2 picPersonPicture;
         private AltoControls.AltoButton btnOk;
         private AltoControls.AltoButton btnCancel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

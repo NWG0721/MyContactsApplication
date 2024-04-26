@@ -76,6 +76,12 @@
     <Compile Include="Forms\AddOrEdit.Designer.cs">
       <DependentUpon>AddOrEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddOrEdit.resx">
       <DependentUpon>AddOrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInfo.resx">
+      <DependentUpon>frmInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

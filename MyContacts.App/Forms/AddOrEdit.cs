@@ -18,22 +18,35 @@ namespace MyContacts.App
     public partial class AddOrEdit : Form
     {
         private string destFilePath = "none";
-
-
-        public AddOrEdit()
+        ContactsUnit db;
+        frmMain main = new frmMain();
+        public AddOrEdit(int index)
         {
             InitializeComponent();
-        }
+            this.index = index;
 
+        }
+        public int index;
         private void AddOrEdit_Load(object sender, EventArgs e)
         {
+            if (index != 0)
+            {
+                db = new ContactsUnit();
 
+                var table = db.ContactsRepository.SelectById(index);
+                txtName.Text = table.Person_FullName;
+                txtPhone.Text = table.Person_Phone;
+                txtEmail.Text = table.Person_Email;
+                txtAddress.Text = table.Person_Address;
+                picPersonPicture.ImageLocation = table.Person_Picture;
+                db.Dispose();
+            }
         }
 
         private void wiLBiTRoundedPictureBox21_Click(object sender, EventArgs e)
         {
             string appPath = Application.StartupPath;
-            string dir = appPath+@"\Images";
+            string dir = appPath + @"\Images";
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
@@ -43,44 +56,89 @@ namespace MyContacts.App
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileName = openFileDialog1.FileName;
-                destFilePath = Path.Combine(dir, openFileDialog1.SafeFileName);
+                string imageName = Guid.NewGuid().ToString() + Path.GetExtension(fileName);
+                destFilePath = Path.Combine(dir, imageName);
                 if (!File.Exists(destFilePath))
                 {
                     File.Copy(fileName, destFilePath);
                 }
 
-                wiLBiTRoundedPictureBox21.Image = Image.FromFile(destFilePath);
+                picPersonPicture.Image = Image.FromFile(destFilePath);
             }
             else
             {
-                wiLBiTRoundedPictureBox21.Image = global::MyContacts.App.Properties.Resources.icons8_trollface_96_1_;
+                picPersonPicture.Image = global::MyContacts.App.Properties.Resources.icons8_trollface_96_1_;
             }
 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
+        //private void btnOk_Click(object sender, EventArgs e)
+        //{
+
+        //    Contact contact = new Contact()
+        //    {
+        //        Person_FullName = txtName.Text,
+        //        Person_Phone = txtPhone.Text,
+        //        Person_Email = txtEmail.Text,
+        //        Person_Address = txtAddress.Text,
+        //        Person_Picture = destFilePath
+        //    };
+        //    switch (index)
+        //    {
+        //        case (0):
+        //            db.ContactsRepository.Insert(contact);
+        //            break;
+        //        default:
+        //            db.ContactsRepository.Update(contact);
+        //            break;
+        //    }
+        //    db.ContactsRepository.Save();
+        //    Thread.Sleep(1000);
+        //    this.Close();
+
+        //}
         private void btnOk_Click(object sender, EventArgs e)
         {
-           
-            ContactsUnit db = new ContactsUnit();
-            Contact newContact = new Contact()
+            Contact contact = new Contact()
             {
                 Person_FullName = txtName.Text,
                 Person_Phone = txtPhone.Text,
                 Person_Email = txtEmail.Text,
-                Person_Address = txtEmail.Text,
+                Person_Address = txtAddress.Text,
                 Person_Picture = destFilePath
             };
-            bool getter = db.ContactsRepository.Insert(newContact);
-            //MessageBox.Show(getter.ToString());
-            db.ContactsRepository.Save();
-            db.Dispose();
-            Thread.Sleep(1000);
-            this.Close();
+
+            try
+            {
+                if (index == 0)
+                {
+                    db = new ContactsUnit();
+                    db.ContactsRepository.Insert(contact);
+                    db.ContactsRepository.Save();
+
+                }
+                else
+                {
+                    db = new ContactsUnit();
+
+                    contact.Person_ID = index;
+                    db.ContactsRepository.Update(contact);
+                    db.ContactsRepository.Save();
+                }
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception and provide a user-friendly error message
+                MessageBox.Show("Error saving contact: " + ex.Message, "Error");
+            }
         }
     }
 }

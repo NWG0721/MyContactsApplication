@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WiLBiT;
 
 namespace MyContacts.App
@@ -34,6 +35,7 @@ namespace MyContacts.App
             mainPanel.Name = "panPerson" + index;
             mainPanel.Size = new System.Drawing.Size(400, 73);
             mainPanel.TabIndex = 0;
+            mainPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(panPerson_MouseClick);
 
 
 
@@ -112,6 +114,11 @@ namespace MyContacts.App
             mainPanel.Controls.Add(lblPerson);
             mainPanel.Controls.Add(spiltPerson);
             mainPanel.Controls.Add(picPerson);
+        }
+
+        private void MainPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

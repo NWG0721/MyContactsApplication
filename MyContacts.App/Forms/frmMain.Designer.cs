@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panHeader = new System.Windows.Forms.Panel();
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.picLogo = new WiLBiT.WiLBiTRoundedPictureBox();
             this.btnExit = new AltoControls.AltoButton();
             this.lblHeaderMyContacts = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.spiltPerson1 = new System.Windows.Forms.Splitter();
             this.picPerson1 = new WiLBiT.WiLBiTRoundedPictureBox2();
             this.panHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panFooter.SuspendLayout();
             this.panBody.SuspendLayout();
@@ -59,7 +57,6 @@
             // 
             // panHeader
             // 
-            this.panHeader.Controls.Add(this.dgvUsers);
             this.panHeader.Controls.Add(this.picLogo);
             this.panHeader.Controls.Add(this.btnExit);
             this.panHeader.Controls.Add(this.lblHeaderMyContacts);
@@ -69,18 +66,6 @@
             this.panHeader.Size = new System.Drawing.Size(400, 57);
             this.panHeader.TabIndex = 0;
             this.panHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Header_MouseDown);
-            // 
-            // dgvUsers
-            // 
-            this.dgvUsers.AllowUserToAddRows = false;
-            this.dgvUsers.AllowUserToDeleteRows = false;
-            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(206, 6);
-            this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.ReadOnly = true;
-            this.dgvUsers.Size = new System.Drawing.Size(137, 44);
-            this.dgvUsers.TabIndex = 1;
-            this.dgvUsers.Visible = false;
             // 
             // picLogo
             // 
@@ -232,6 +217,7 @@
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "D";
             this.btnDelete.Transparency = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -381,7 +367,6 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panHeader.ResumeLayout(false);
             this.panHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.panFooter.ResumeLayout(false);
             this.panBody.ResumeLayout(false);
@@ -405,7 +390,6 @@
         private AltoControls.AltoButton btnAdd;
         private AltoControls.AltoButton btnUpdate;
         private AltoControls.AltoButton btnSearch;
-        private System.Windows.Forms.DataGridView dgvUsers;
         private AltoControls.AltoTextBox txtSearch;
         private System.Windows.Forms.Panel panBody;
         private WiLBiT.WiLBiTPanel panPerson1;
